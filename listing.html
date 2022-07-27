@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>listing</title>
+</head>
+<body>
+    <nav class=" navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand logo-text"  href="#">Spacebar</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item" >
+                <a class="nav-link" href="#home" style="color: #11245a ;" >HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#spaces" style="color: #11245a ;" >EVENT SPACES</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#services" style="color: #11245a ;" >OUR SERVICES</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#explore" style="color: #11245a ;" >EXPLORE</a>
+              </li>            
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact" style="color: #11245a ;" >CONTACT</a>
+              </li>
+             <li class="nav-item">
+                <a href="#listing" class="btn btn-brand" style="background-color: #ff5a60  ; color:#fff ;font-weight: 500; font-size: 12px; text-transform: uppercase; padding: 12px 28px; border-radius: 30; " > Add listing</a></li>
+          </div>
+        </div>
+      </nav>
+
+
+      <section > 
+         <div class="container">
+            <div class="row align-items-center">
+             <div class="col-12 section-intro">
+                <div class="hline"></div>
+             </div>
+               <div class="col-lg-4">
+                  <img src="images/clubs.jpg" alt="">
+               </div>
+               <div class="col-lg-6 offset-lg-1">
+                 <h2 style="text-align: left; font-weight: 400 ; padding-bottom: 2%;" >How to become a Spacebar host </h2>
+                 
+                         <h4>List your space for free</h4>
+                         <p>Set your price, add photos and details, then your listing is ready to be seen by millions of people searching for space.</p>
+                         <h4>Get contacted by spacebar team</h4>
+                         <p>Expect a call from spacebar team and discussion on payment and security. Once you confirm, your guests will receive information on how to get there and details like your wifi code.</p>
+                         <h4>Get paid every time</h4>
+                         <p>Guests are charged upfront through Spacebar's secure payment system. Your payout is directly deposited after each event, minus our 25% service fee.</p>  
+               </div>
+            </div>
+         </div>  
+      </section> 
+
+      <section>
+         <div style="padding-right: 30%; padding-left: 30%">
+            <h1  style="font-weight: 400 ; padding-bottom: 2%;">List your space</h1>
+                 
+                 <form action="reservation.php" method="post"> 
+                  <div class="elem-group">
+                    <!-- <label for="name">Your Name</label> -->
+                    <input type="text" id="name" name="name" placeholder="Name" pattern=[A-Z\sa-z]{3,50} required>
+                  </div>
+                  <div class="elem-group">
+                    <!-- <label for="email">Your E-mail</label> -->
+                    <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                  </div>
+                  <div class="elem-group">
+                    <!-- <label for="phone">Your Phone</label> -->
+                    <input type="tel" id="phone" name="phone" placeholder="000-000-0000" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                  </div>
+                  <hr>
+                  <div class="elem-group">
+                     <label for="event-selection"> Select Event types</label>
+                     <select id="event-selection" name="event-selection" required>
+                         <option value="">Choose from the List</option>
+                         <option value="connecting">Party</option>
+                         <option value="adjoining">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                         <option value="adjacent">Party</option>
+                     </select>
+                   </div>
+                  <div class="elem-group ">
+                    <label for="adult">Capacity</label>
+                    <input type="number" id="attendance" name="total_attendance" placeholder="e.g 100" min="10" required>
+                  </div>
+                  <div class="elem-group ">
+                     <label for="adult">Hourly Rate</label>
+                     <input type="number" id="rate" name="rate" placeholder="e.g GHS 250" required>
+                   </div>
+                  <div class="elem-group inlined">
+                    <label for="start-date">Availability start date</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                  </div>
+                  <div class="elem-group inlined">
+                     <label for="end-date">Availability end date</label>
+                     <input type="date" id="end-date" name="end-date" required>
+                   </div>
+                  <hr>
+                  <div class="elem-group">
+                    <label for="message">Amenities</label>
+                    <textarea id="amenities" name="amenities" placeholder="What amenities does your space provide" required></textarea>
+                  </div>
+                  <div class="elem-group">
+                     <label for="message">Description</label>
+                     <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                   </div>
+                   <hr>
+                   <div class="elem-group">
+                   <p>Upload at least quality iamges of your space:</p>
+                     <input type="file" id="images" name="filename" style="padding: 3%;">
+                     <input type="file" id="images" name="filename" style="padding: 3%;" >
+                     <input type="file" id="images" name="filename" style="padding: 3%;">
+                     <input type="file" id="images" name="filename" style="padding: 3%;">
+                     <input type="file" id="images" name="filename" style="padding: 3%;">
+                     <input type="file" id="images" name="filename" style="padding: 3%;">
+                     
+                  </div>
+                  <button type="submit" class="btn btn-brand" style="background-color: #ff5a60  ; color:#fff ;font-weight: 500; font-size: 12px; text-transform: uppercase; padding: 12px 28px; border-radius: 30; "><i class="fa fa-search"> List on Spacebar </i></button>
+                </form>
+         </div>
+      </section>
+
+
+   <section id="listing" class="py-5">
+        <div class="container py-4">
+           <div class="row justify-content-center">
+              <div class="col-md-6">
+                 <h3 class="text-white"  style="text-align: center; text-transform: none; font-weight: 400;">Know more about our security and safety policy.</h3>
+              </div>
+              <div class="col-auto">
+                 <a href="#contact" class="btn btn-light" > Know More</a>
+              </div>
+           </div>
+        </div>
+   </section>
+
+    <footer>
+        <div class="footer-top">
+           <div class="container">
+              <div class="row gy-5">
+                 <div class="col-md-4">
+                    <h4 class="logo-text">Spacebar</h4>
+                    <p > Create memorable moments with unique spaces for your upcoming events - Book now</p>
+                    <div class="social-icons">
+                       <a href="#"><i class="bx bxl-facebook"></i></a>
+                       <a href="#"><i class="bx bxl-twitter"></i></a>
+                       <a href="#"><i class="bx bxl-instagram"></i></a>
+                       
+                    </div>
+                 </div>
+                 <div class="col-md-2">
+                    <h5 class="title-sm">Navigation</h5>
+                    <div class="footer-links">
+                       <a href="#services">Services</a>
+                       <a href="#spaces">Find Spaces</a>
+                       <a href="#explore">Explore other Cities</a>
+                       <a href="#home">Contact Us</a>
+                    </div>
+                 </div>
+                 <div class="col-md-2">
+                    <h5 class="title-sm">More</h5>
+                    <div class="footer-links">
+                       <a href="#">FAQ's</a>
+                       <a href="#">Privacy & Policy</a>
+                       <a href="#">Liscences</a>
+                    </div>
+                 </div>
+                 <div class="col-md-2">
+                    <h5 class="title-sm">Contact</h5>
+                    <div class="footer-links">
+                       <p class="mb" style="margin: 0px;">CT 9606 Cantonments-Accra</p>
+                       <p class="mb" style="margin: 0px;"> 057-054-5165/050-571-5339 </p>
+                       <p class="mb" style="margin: 0px;">friends@ourspacebar.com</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="footer-bottom">
+           <div class="container">
+              <div class="row justify-content-between gy-3">
+                 <div class="col-md-6">
+                    <p class="mb-0">© ourspacebar.com. All rights reserved</p>
+                 </div>
+                 <div class="col-auto">
+                    <p class="mb-0">Created by Spacebar Inc.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
+ 
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
